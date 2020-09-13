@@ -4,7 +4,6 @@
 		<meta charset="utf-8" />
 		<title>NerdBeef! Smartbuzzer</title>
 		<link rel="stylesheet" type="text/css" href="stylebuzzer.css" media="screen" />
-		<script type="text/javascript" src="ip.js"></script>
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.mobile.custom.min.js"></script>
 		<script type="text/javascript" src="socket.io.js"></script>
@@ -14,7 +13,7 @@
 		<script type="text/javascript">
 		$(function() {
 			$('#buzzerwrapper').hide();
-			var socket = io.connect(ip);
+			var socket = io();
 			
 			var getUrlParameter = function getUrlParameter(sParam) {
 				var sPageURL = decodeURIComponent(window.location.search.substring(1)),

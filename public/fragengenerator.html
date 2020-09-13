@@ -4,7 +4,6 @@
 		<meta charset="utf-8" />
 		<title>NerdBeef! Fragengenerator</title>
 		<link rel="stylesheet" type="text/css" href="stylefragen.css" media="screen" />
-		<script type="text/javascript" src="ip.js"></script>
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="socket.io.js"></script>
 		<script type="text/javascript" src="func.js"></script>
@@ -21,7 +20,7 @@
 			$('#downloaddiv').hide();
 			$('#fragendiv').hide();
 			$('#textbox').val('Bitte aktualisieren Sie die Kategorien im Adminpanel, damit das Template für die Fragen erstellt wird.');
-			var socket = io.connect(ip);
+			var socket = io();
 			var kategorien = [];
 			var anzahl_kategorien = 0;
 			var punkte = [];
@@ -208,4 +207,3 @@
 			<br>
 			<textarea id="textbox" rows="15" cols="200"></textarea>
 	</body>
-			

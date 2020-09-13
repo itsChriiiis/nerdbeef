@@ -36,9 +36,6 @@ app.get('/buzzerweb', function(req, res) {
 app.get('/buzzerweb.jpg', function(req, res) {
 	res.sendFile(__dirname + '/buzzerweb/buzzerweb.jpg');
 });
-app.get('/ip.js', function(req, res) {
-	res.sendFile(__dirname + '/ip.js');
-});
 app.get('/jquery.min.js', function(req, res) {
 	res.sendFile(__dirname + '/public/jquery/jquery.min.js');
 });

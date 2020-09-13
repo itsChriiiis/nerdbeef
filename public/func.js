@@ -35,7 +35,7 @@ var color_blue_grey = ['#607D8B', '#ECEFF1', '#CFD8DC', '#B0BEC5', '#90A4AE', '#
 var colorarray = [color_red, color_pink, color_purple, color_deep_purple, color_indigo, color_blue, color_light_blue, color_cyan, color_teal, color_green, color_light_green, color_lime, color_yellow, color_amber, color_orange, color_deep_orange, color_brown, color_grey, color_blue_grey];
 //var colorarray = [color_indigo, color_light_blue, color_teal, color_light_green, color_orange, color_brown, color_red, color_pink, color_purple, color_deep_purple, color_blue, color_cyan, color_green, color_lime, color_yellow, color_amber, color_deep_orange, color_grey, color_blue_grey];
 
-var socket = io.connect(ip);
+var socket = io();
 
 function refresh_drag_drop()
 {
@@ -385,7 +385,7 @@ function reset_timestamps()
 function read_question(id)
 {
 	clean_admin_question();
-	var location = 'http://'+ip+'/fragen.txt';
+	var location = 'fragen.txt';
 	$.get( location, function( data ) {
 		var i=0;
 		var zeilen = data.split('\n');					

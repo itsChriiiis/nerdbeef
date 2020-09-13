@@ -4,7 +4,6 @@
 		<meta charset="utf-8" />
 		<title>NerdBeef! Adminbereich</title>
 		<link rel="stylesheet" type="text/css" href="styleadmin.css" media="screen" />
-		<script type="text/javascript" src="ip.js"></script>
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery-ui.js"></script>
 		<script type="text/javascript" src="socket.io.js"></script>
@@ -19,7 +18,7 @@
 		preventUnload( true );
   
 		$(function() {
-			var socket = io.connect(ip);
+			var socket = io();
 			$('#adminpointsheader td').text('');
 			$('#fixquestionrow').hide();
 			clean_admin_question();

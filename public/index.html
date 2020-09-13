@@ -4,7 +4,6 @@
 		<meta charset="utf-8" />
 		<title>NerdBeef! Spielbrett</title>
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-		<script type="text/javascript" src="ip.js"></script>
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery-ui.js"></script>
 		<script type="text/javascript" src="jquery.pietimer.js"></script>
@@ -48,7 +47,7 @@
 		}
 		
 		jQuery(function($){
-			var socket = io.connect(ip);
+			var socket = io();
 			var players = [];
 			var scores = [];
 			$('#stand').html(version+' '+datum);
