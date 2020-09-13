@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  nerdbeef2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nerdbeef:latest
+    container_name: nerdbeef-app
+    ports:
+      - 1111:1111
+    volumes:
+      - ./fragen.txt:/usr/src/app/fragen.txt
+      - ./trivia:/usr/src/app/trivia
+      - ./imagequestionimage:/usr/src/app/imagequestionimage
+

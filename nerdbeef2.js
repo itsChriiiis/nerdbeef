@@ -123,19 +123,19 @@ Object.keys(ifaces).forEach(function (ifname) {
 });
 console.log("-----------------------------------");
 
-rl.question('Bitte wählen Sie das gewünschte Interface: ', (answer) => {
-	iptext = "var ip=\""+adressen[answer]+"\";";
-	fs.writeFile('/ip.js', iptext, function (err) {
-		if (err) {
-			console.log(err);
-		}
-	});
-	open("http://"+adressen[answer]);
-	console.log("Server erreichbar über: http://"+adressen[answer]);
-	console.log("");
-	console.log("Server beenden mit Tastenkombination");
-	console.log("STRG+C");
-	rl.close();
-});
+if (adressen.length === 1) {
+    f(0);
+} else {
+    rl.question('Bitte wählen Sie das gewünschte Interface: ', (answer) => f(answer));
+}
 
 server.listen(conf.port);
+
+function f(answer) {
+    open("http://" + adressen[answer]);
+    console.log("Server erreichbar über: http://" + adressen[answer]);
+    console.log("");
+    console.log("Server beenden mit Tastenkombination");
+    console.log("STRG+C");
+    rl.close();
+}

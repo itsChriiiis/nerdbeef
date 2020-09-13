@@ -1,0 +1,13 @@
+.dockerignore
+.git
+.idea
+
+node_modules
+npm-debug.log
+
+docker-compose.yml
+Start-Nerdbeef.cmd
+buzzerandroid
+buzzerkeyboard
+buzzerps2buzz
+buzzerraspberrypi
